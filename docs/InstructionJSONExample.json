@@ -1,0 +1,99 @@
+Sample Pull files instructions 
+
+{
+  "sftp.server.heartbeat.interval": "180",
+  "sftp.server.instructions": [
+    {
+      "sftp.server.rule": "pullfile",
+      "sftp.server.rule.name": "Get accounting files",
+      "sftp.server.filter.dir.path": "Pull File Folder",
+      "sftp.server.push.recursively": true,
+      "sftp.server.filter.recursion.depth": 10,
+      "sftp.server.filter.filename": "",
+      "sftp.server.filter.ignore.dotted.files": true,
+      "sftp.server.filter.filetype": "",
+      "sftp.server.filter.filecontent": "",
+      "sftp.server.filter.files.per.batch": 10,
+      "sftp.server.filter.total.files": 500,
+      "sftp.server.filter.delete.original": false,
+      "sftp.server.filter.ignore.processed.file": true,
+      "sftp.server.filter.file.includefileregexlist": [
+        "^.*\\.(?!jpg$|png$)[^.]+$",
+        "^.*\\.(?!jpg$|jpg$)[^.]+$",
+        "^.*\\.(?!jpg$|doc$)[^.]+$",
+        "^.*\\.(?!jpg$|txt$)[^.]+$"
+      ],
+      "sftp.server.filter.file.excludefileregexlist": [
+        
+        "^.*\\.(?!jpg$|exe$)[^.]+$"
+      ]
+    }
+  ]
+}
+
+
+
+Sample Push File Instructions
+{
+ "sftp.server.heartbeat.interval": "2",
+ "sftp.server.instructions": [
+  	{
+			"sftp.server.rule": "pushfile",
+			"sftp.server.rule.name": "Keep sending new admin files",
+			"sftp.server.polling.interval": "6",
+			"sftp.server.push.recursively": true,
+			"sftp.server.filter.recursion.depth": 10,
+			"sftp.server.filter.dir.path": "Push File Folder",
+			"sftp.server.use.compression": true,
+			"sftp.server.use.natural.ordering": true,
+			"sftp.server.filter.filename": "",
+			"sftp.server.filter.ignore.dotted.files": true,
+			"sftp.server.filter.filetype": "",
+			"sftp.server.filter.filecontent": "",
+			"sftp.server.filter.files.per.batch": 10,
+			"sftp.server.filter.total.files": 500,
+			"sftp.server.filter.delete.original": false,
+			"sftp.server.filter.ignore.processed.file": true,
+      "sftp.server.filter.file.includefileregexlist": [
+        "^.*\\.(?!jpg$|png$)[^.]+$",
+        "^.*\\.(?!jpg$|jpg$)[^.]+$",
+        "^.*\\.(?!jpg$|doc$)[^.]+$",
+        "^.*\\.(?!jpg$|txt$)[^.]+$"
+      ],
+      "sftp.server.filter.file.excludefileregexlist": [
+        
+        "^.*\\.(?!jpg$|exe$)[^.]+$"
+      ]
+			
+		}
+ ]
+}
+
+
+
+Sample Database instructions
+
+{
+ "sftp.server.heartbeat.interval": "2",
+ "sftp.server.instructions": [
+  {
+   "sftp.server.rule": "sql",
+   "sftp.server.rule.name": "Get HR data from DB",
+   "sftp.server.use.compression": true,
+   "sftp.server.database.connection.url": "jdbc:hsqldb:mem:mymemdb",
+   "sftp.server.database.connection.driver.class.name": "org.hsqldb.jdbc.JDBCDriver",
+   "sftp.server.database.connection.driver.location(s)": [
+    "C:/Users/vikrant/OneDrive/eformEnviornment/hsqldb-2.4.0.jar"
+   ],
+   "sftp.server.database.max.total.connections": 10,
+   "sftp.server.database.max.wait.time": "500",
+   "sftp.server.database.validation.query": "select count(*) from USER",
+   "sftp.server.database.user": "admin",
+   "sftp.server.database.password": "admin",
+   "sftp.server.database.sql.query": "SELECT * FROM   INFORMATION_SCHEMA.TABLES"
+  }
+ ]
+}
+
+
+

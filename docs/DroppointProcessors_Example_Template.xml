@@ -1,0 +1,987 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description>This template demonstrates three types of interaction with the same droppoint installed on my local system.
+
+Configurations required on the Droppoint
+
+Allowed Processor ids (comma seperated)
+c28990f6-015b-1000-e65c-705143439944, c289f143-015b-1000-95d0-89bbe687b78d,c361457a-015b-1000-e22d-4431e7fe0513
+
+Droppoint Sftp Root Directory
+C:\temp\NIFIDroppointTest
+
+Server Host Name
+Can be 127.0.0.1 or external IP address of the server where Processor / nifi is installed.
+ </description>
+  <groupId>9bac924f-015a-1000-5434-5208739dd433</groupId>
+  <name>DroppointProcessors Example Template</name>
+  <snippet>
+    <connections>
+      <id>c28b62ea-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <bends>
+        <x>579.9397280769906</x>
+        <y>154.39833817596138</y>
+      </bends>
+      <destination>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c28b2dec-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>0</labelIndex>
+      <name></name>
+      <selectedRelationships>file.success</selectedRelationships>
+      <source>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c28990f6-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>c28b7403-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c28b2dec-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>file.success</selectedRelationships>
+      <source>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c289f143-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>c28b85b2-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <bends>
+        <x>611.2780459480844</x>
+        <y>586.5371931564301</y>
+      </bends>
+      <destination>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c28ac7dd-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>0</labelIndex>
+      <name></name>
+      <selectedRelationships>file.failure</selectedRelationships>
+      <source>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c28990f6-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>c28b979a-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <bends>
+        <x>606.3299258308969</x>
+        <y>507.36671433562935</y>
+      </bends>
+      <destination>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c28ac7dd-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>0</labelIndex>
+      <name></name>
+      <selectedRelationships>file.failure</selectedRelationships>
+      <source>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c289f143-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>c36169af-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <bends>
+        <x>578.2903750496469</x>
+        <y>223.67249283904732</y>
+      </bends>
+      <destination>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c28b2dec-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>0</labelIndex>
+      <name></name>
+      <selectedRelationships>file.success</selectedRelationships>
+      <source>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c361457a-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <connections>
+      <id>c3617cfa-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+      <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+      <destination>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c28ac7dd-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </destination>
+      <flowFileExpiration>0 sec</flowFileExpiration>
+      <labelIndex>1</labelIndex>
+      <name></name>
+      <selectedRelationships>file.failure</selectedRelationships>
+      <source>
+        <groupId>9bac924f-015a-1000-0000-000000000000</groupId>
+        <id>c361457a-015b-1000-0000-000000000000</id>
+        <type>PROCESSOR</type>
+      </source>
+      <zIndex>0</zIndex>
+    </connections>
+    <controllerServices>
+      <id>c2888af0-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Hostname</key>
+          <value>
+            <name>Hostname</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Port</key>
+          <value>
+            <name>Port</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Username</key>
+          <value>
+            <name>Username</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Password</key>
+          <value>
+            <name>Password</name>
+          </value>
+        </entry>
+        <entry>
+          <key>MinDropPointPort</key>
+          <value>
+            <name>MinDropPointPort</name>
+          </value>
+        </entry>
+        <entry>
+          <key>MaxDropPointPort</key>
+          <value>
+            <name>MaxDropPointPort</name>
+          </value>
+        </entry>
+        <entry>
+          <key>DropPointIdList</key>
+          <value>
+            <name>DropPointIdList</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>DroppointControllerHSBC</name>
+      <properties>
+        <entry>
+          <key>Hostname</key>
+        </entry>
+        <entry>
+          <key>Port</key>
+        </entry>
+        <entry>
+          <key>Username</key>
+        </entry>
+        <entry>
+          <key>Password</key>
+        </entry>
+        <entry>
+          <key>MinDropPointPort</key>
+        </entry>
+        <entry>
+          <key>MaxDropPointPort</key>
+        </entry>
+        <entry>
+          <key>DropPointIdList</key>
+        </entry>
+      </properties>
+      <state>ENABLED</state>
+      <type>com.thoughtapps.droppoint.droppointnode.nifi.DroppointControllerImpl</type>
+    </controllerServices>
+    <processGroups>
+      <id>9de0cead-015a-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>2388.2787917214</x>
+        <y>418.9942906867951</y>
+      </position>
+      <comments></comments>
+      <contents>
+        <connections>
+          <id>a53c73cc-015a-1000-0000-000000000000</id>
+          <parentGroupId>9de0cead-015a-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>a51f0b78-015a-1000-0000-000000000000</groupId>
+            <id>a5295424-015a-1000-0000-000000000000</id>
+            <type>INPUT_PORT</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <source>
+            <groupId>a51f0b72-015a-1000-0000-000000000000</groupId>
+            <id>a534fbd8-015a-1000-0000-000000000000</id>
+            <type>OUTPUT_PORT</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <processGroups>
+          <id>a51f0b72-015a-1000-0000-000000000000</id>
+          <parentGroupId>9de0cead-015a-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>31.042020797729492</x>
+            <y>-111.55433130264282</y>
+          </position>
+          <comments>This group is used to create a candidate</comments>
+          <contents>
+            <connections>
+              <id>a51f0b77-015a-1000-0000-000000000000</id>
+              <parentGroupId>a51f0b72-015a-1000-0000-000000000000</parentGroupId>
+              <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+              <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+              <destination>
+                <groupId>a51f0b72-015a-1000-0000-000000000000</groupId>
+                <id>a51f0b76-015a-1000-0000-000000000000</id>
+                <type>PROCESSOR</type>
+              </destination>
+              <flowFileExpiration>0 sec</flowFileExpiration>
+              <labelIndex>1</labelIndex>
+              <name></name>
+              <selectedRelationships>success</selectedRelationships>
+              <source>
+                <groupId>a51f0b72-015a-1000-0000-000000000000</groupId>
+                <id>a51f0b74-015a-1000-0000-000000000000</id>
+                <type>PROCESSOR</type>
+              </source>
+              <zIndex>0</zIndex>
+            </connections>
+            <connections>
+              <id>a5354c04-015a-1000-0000-000000000000</id>
+              <parentGroupId>a51f0b72-015a-1000-0000-000000000000</parentGroupId>
+              <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+              <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+              <destination>
+                <groupId>a51f0b72-015a-1000-0000-000000000000</groupId>
+                <id>a534fbd8-015a-1000-0000-000000000000</id>
+                <type>OUTPUT_PORT</type>
+              </destination>
+              <flowFileExpiration>0 sec</flowFileExpiration>
+              <labelIndex>1</labelIndex>
+              <name>my output port</name>
+              <selectedRelationships>success</selectedRelationships>
+              <source>
+                <groupId>a51f0b72-015a-1000-0000-000000000000</groupId>
+                <id>a51f0b76-015a-1000-0000-000000000000</id>
+                <type>PROCESSOR</type>
+              </source>
+              <zIndex>0</zIndex>
+            </connections>
+            <connections>
+              <id>cb6448f4-015a-1000-0000-000000000000</id>
+              <parentGroupId>a51f0b72-015a-1000-0000-000000000000</parentGroupId>
+              <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+              <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+              <destination>
+                <groupId>a51f0b72-015a-1000-0000-000000000000</groupId>
+                <id>a51f0b76-015a-1000-0000-000000000000</id>
+                <type>PROCESSOR</type>
+              </destination>
+              <flowFileExpiration>0 sec</flowFileExpiration>
+              <labelIndex>1</labelIndex>
+              <name></name>
+              <source>
+                <groupId>a51f0b72-015a-1000-0000-000000000000</groupId>
+                <id>cb641f66-015a-1000-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+              </source>
+              <zIndex>0</zIndex>
+            </connections>
+            <inputPorts>
+              <id>cb641f66-015a-1000-0000-000000000000</id>
+              <parentGroupId>a51f0b72-015a-1000-0000-000000000000</parentGroupId>
+              <position>
+                <x>264.16758088580286</x>
+                <y>-154.79731026950935</y>
+              </position>
+              <comments></comments>
+              <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+              <name>test input port</name>
+              <state>STOPPED</state>
+              <type>INPUT_PORT</type>
+            </inputPorts>
+            <outputPorts>
+              <id>a534fbd8-015a-1000-0000-000000000000</id>
+              <parentGroupId>a51f0b72-015a-1000-0000-000000000000</parentGroupId>
+              <position>
+                <x>812.515790102314</x>
+                <y>-343.9676228268179</y>
+              </position>
+              <comments></comments>
+              <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+              <name>my output port</name>
+              <state>STOPPED</state>
+              <type>OUTPUT_PORT</type>
+            </outputPorts>
+            <processors>
+              <id>a51f0b74-015a-1000-0000-000000000000</id>
+              <parentGroupId>a51f0b72-015a-1000-0000-000000000000</parentGroupId>
+              <position>
+                <x>-401.07310676574707</x>
+                <y>-372.5387740135193</y>
+              </position>
+              <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                  <entry>
+                    <key>File Size</key>
+                    <value>
+                      <name>File Size</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Batch Size</key>
+                    <value>
+                      <name>Batch Size</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Data Format</key>
+                    <value>
+                      <name>Data Format</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Unique FlowFiles</key>
+                    <value>
+                      <name>Unique FlowFiles</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>generate-ff-custom-text</key>
+                    <value>
+                      <name>generate-ff-custom-text</name>
+                    </value>
+                  </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                  <entry>
+                    <key>File Size</key>
+                    <value>1000B</value>
+                  </entry>
+                  <entry>
+                    <key>Batch Size</key>
+                    <value>1</value>
+                  </entry>
+                  <entry>
+                    <key>Data Format</key>
+                    <value>Text</value>
+                  </entry>
+                  <entry>
+                    <key>Unique FlowFiles</key>
+                    <value>false</value>
+                  </entry>
+                  <entry>
+                    <key>generate-ff-custom-text</key>
+                  </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>1 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>0 sec</yieldDuration>
+              </config>
+              <name>Employee Self Evaluation</name>
+              <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+              </relationships>
+              <style></style>
+              <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+            </processors>
+            <processors>
+              <id>a51f0b76-015a-1000-0000-000000000000</id>
+              <parentGroupId>a51f0b72-015a-1000-0000-000000000000</parentGroupId>
+              <position>
+                <x>206.28399658203125</x>
+                <y>-376.0940041542053</y>
+              </position>
+              <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments>This is my logger</comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                  <entry>
+                    <key>Log Level</key>
+                    <value>
+                      <name>Log Level</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Log Payload</key>
+                    <value>
+                      <name>Log Payload</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Attributes to Log</key>
+                    <value>
+                      <name>Attributes to Log</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Attributes to Ignore</key>
+                    <value>
+                      <name>Attributes to Ignore</name>
+                    </value>
+                  </entry>
+                  <entry>
+                    <key>Log prefix</key>
+                    <value>
+                      <name>Log prefix</name>
+                    </value>
+                  </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                  <entry>
+                    <key>Log Level</key>
+                    <value>info</value>
+                  </entry>
+                  <entry>
+                    <key>Log Payload</key>
+                    <value>false</value>
+                  </entry>
+                  <entry>
+                    <key>Attributes to Log</key>
+                  </entry>
+                  <entry>
+                    <key>Attributes to Ignore</key>
+                  </entry>
+                  <entry>
+                    <key>Log prefix</key>
+                  </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>1 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>0 sec</yieldDuration>
+              </config>
+              <name>HR Evaluation</name>
+              <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+              </relationships>
+              <style>
+                <entry>
+                  <key>background-color</key>
+                  <value>#665050</value>
+                </entry>
+              </style>
+              <type>org.apache.nifi.processors.standard.LogAttribute</type>
+            </processors>
+          </contents>
+          <name>Upload data from my Desktop</name>
+        </processGroups>
+        <processGroups>
+          <id>a51f0b78-015a-1000-0000-000000000000</id>
+          <parentGroupId>9de0cead-015a-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>935.320222167969</x>
+            <y>-50.865526981353696</y>
+          </position>
+          <comments>lhhoiu  uy ygyg</comments>
+          <contents>
+            <inputPorts>
+              <id>a5295424-015a-1000-0000-000000000000</id>
+              <parentGroupId>a51f0b78-015a-1000-0000-000000000000</parentGroupId>
+              <position>
+                <x>680.6683542256421</x>
+                <y>140.18017479816922</y>
+              </position>
+              <comments></comments>
+              <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+              <name>My Input port to import data</name>
+              <state>STOPPED</state>
+              <type>INPUT_PORT</type>
+              <validationErrors>'Port 'My Input port to import data'' is invalid because Output connection for port 'My Input port to import data' is not defined.</validationErrors>
+            </inputPorts>
+          </contents>
+          <name>Send my data to the Muncipality</name>
+        </processGroups>
+      </contents>
+      <name>My Test Process Group</name>
+    </processGroups>
+    <processors>
+      <id>c28990f6-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>3.298827441123194</x>
+        <y>283.6941776878435</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Drop point node controller</key>
+            <value>
+              <identifiesControllerService>com.thoughtapps.droppoint.droppointnode.nifi.DroppointController</identifiesControllerService>
+              <name>Drop point node controller</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Instructions Polling Interval</key>
+            <value>
+              <name>Instructions Polling Interval</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Instruction JSON</key>
+            <value>
+              <name>Instruction JSON</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Drop point node controller</key>
+            <value>c2888af0-015b-1000-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>Instructions Polling Interval</key>
+            <value>4 sec</value>
+          </entry>
+          <entry>
+            <key>Instruction JSON</key>
+            <value>{
+  "sftp.server.heartbeat.interval": "180",
+  "sftp.server.instructions": [
+    {
+      "sftp.server.rule": "pullfile",
+      "sftp.server.rule.name": "Get accounting files",
+      "sftp.server.filter.dir.path": "Pull File Folder",
+      "sftp.server.push.recursively": true,
+      "sftp.server.filter.recursion.depth": 10,
+      "sftp.server.filter.filename": "",
+      "sftp.server.filter.ignore.dotted.files": true,
+      "sftp.server.filter.filetype": "",
+      "sftp.server.filter.filecontent": "",
+      "sftp.server.filter.files.per.batch": 10,
+      "sftp.server.filter.total.files": 500,
+      "sftp.server.filter.delete.original": false,
+      "sftp.server.filter.ignore.processed.file": true,
+      "sftp.server.filter.file.includefileregexlist": [
+        "^.*\\.(?!jpg$|png$)[^.]+$",
+        "^.*\\.(?!jpg$|jpg$)[^.]+$",
+        "^.*\\.(?!jpg$|doc$)[^.]+$",
+        "^.*\\.(?!jpg$|txt$)[^.]+$"
+      ],
+      "sftp.server.filter.file.excludefileregexlist": [
+        
+        "^.*\\.(?!jpg$|exe$)[^.]+$"
+      ]
+    }
+  ]
+}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PullFileDroppointProcessorFor HSBC</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>file.failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>file.success</name>
+      </relationships>
+      <style></style>
+      <type>com.thoughtapps.droppoint.droppointnode.nifi.DroppointProcessor</type>
+    </processors>
+    <processors>
+      <id>c289f143-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>11.545625207330659</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Drop point node controller</key>
+            <value>
+              <identifiesControllerService>com.thoughtapps.droppoint.droppointnode.nifi.DroppointController</identifiesControllerService>
+              <name>Drop point node controller</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Instructions Polling Interval</key>
+            <value>
+              <name>Instructions Polling Interval</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Instruction JSON</key>
+            <value>
+              <name>Instruction JSON</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Drop point node controller</key>
+            <value>c2888af0-015b-1000-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>Instructions Polling Interval</key>
+            <value>4 sec</value>
+          </entry>
+          <entry>
+            <key>Instruction JSON</key>
+            <value>{
+ "sftp.server.heartbeat.interval": "2",
+ "sftp.server.instructions": [
+  {
+   "sftp.server.rule": "sql",
+   "sftp.server.rule.name": "Get HR data from DB",
+   "sftp.server.use.compression": true,
+   "sftp.server.database.connection.url": "jdbc:hsqldb:mem:mymemdb",
+   "sftp.server.database.connection.driver.class.name": "org.hsqldb.jdbc.JDBCDriver",
+   "sftp.server.database.connection.driver.location(s)": [
+    "C:/Users/vikrant/OneDrive/eformEnviornment/hsqldb-2.4.0.jar"
+   ],
+   "sftp.server.database.max.total.connections": 10,
+   "sftp.server.database.max.wait.time": "500",
+   "sftp.server.database.validation.query": "select count(*) from USER",
+   "sftp.server.database.user": "admin",
+   "sftp.server.database.password": "admin",
+   "sftp.server.database.sql.query": "SELECT * FROM   INFORMATION_SCHEMA.TABLES"
+  }
+ ]
+}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>DBDroppointProcessorForHSBC</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>file.failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>file.success</name>
+      </relationships>
+      <style></style>
+      <type>com.thoughtapps.droppoint.droppointnode.nifi.DroppointProcessor</type>
+    </processors>
+    <processors>
+      <id>c28ac7dd-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>862.6284787627861</x>
+        <y>654.8058514382589</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Attributes List</key>
+            <value>
+              <name>Attributes List</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Destination</key>
+            <value>
+              <name>Destination</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>
+              <name>Include Core Attributes</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Null Value</key>
+            <value>
+              <name>Null Value</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Attributes List</key>
+          </entry>
+          <entry>
+            <key>Destination</key>
+            <value>flowfile-attribute</value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Null Value</key>
+            <value>false</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>AttributesToJSON</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.AttributesToJSON</type>
+    </processors>
+    <processors>
+      <id>c28b2dec-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>801.6011913946879</x>
+        <y>0.0</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Attributes List</key>
+            <value>
+              <name>Attributes List</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Destination</key>
+            <value>
+              <name>Destination</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>
+              <name>Include Core Attributes</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Null Value</key>
+            <value>
+              <name>Null Value</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Attributes List</key>
+          </entry>
+          <entry>
+            <key>Destination</key>
+            <value>flowfile-attribute</value>
+          </entry>
+          <entry>
+            <key>Include Core Attributes</key>
+            <value>true</value>
+          </entry>
+          <entry>
+            <key>Null Value</key>
+            <value>false</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>AttributesToJSON</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>success</name>
+      </relationships>
+      <style></style>
+      <type>org.apache.nifi.processors.standard.AttributesToJSON</type>
+    </processors>
+    <processors>
+      <id>c361457a-015b-1000-0000-000000000000</id>
+      <parentGroupId>9bac924f-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>3.558104784873194</x>
+        <y>565.9982548362809</y>
+      </position>
+      <config>
+        <bulletinLevel>WARN</bulletinLevel>
+        <comments></comments>
+        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+        <descriptors>
+          <entry>
+            <key>Drop point node controller</key>
+            <value>
+              <identifiesControllerService>com.thoughtapps.droppoint.droppointnode.nifi.DroppointController</identifiesControllerService>
+              <name>Drop point node controller</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Instructions Polling Interval</key>
+            <value>
+              <name>Instructions Polling Interval</name>
+            </value>
+          </entry>
+          <entry>
+            <key>Instruction JSON</key>
+            <value>
+              <name>Instruction JSON</name>
+            </value>
+          </entry>
+        </descriptors>
+        <executionNode>ALL</executionNode>
+        <lossTolerant>false</lossTolerant>
+        <penaltyDuration>30 sec</penaltyDuration>
+        <properties>
+          <entry>
+            <key>Drop point node controller</key>
+            <value>c2888af0-015b-1000-0000-000000000000</value>
+          </entry>
+          <entry>
+            <key>Instructions Polling Interval</key>
+            <value>4 sec</value>
+          </entry>
+          <entry>
+            <key>Instruction JSON</key>
+            <value>{
+ "sftp.server.heartbeat.interval": "2",
+ "sftp.server.instructions": [
+  	{
+			"sftp.server.rule": "pushfile",
+			"sftp.server.rule.name": "Keep sending new admin files",
+			"sftp.server.polling.interval": "6",
+			"sftp.server.push.recursively": true,
+			"sftp.server.filter.recursion.depth": 10,
+			"sftp.server.filter.dir.path": "Push File Folder",
+			"sftp.server.use.compression": true,
+			"sftp.server.use.natural.ordering": true,
+			"sftp.server.filter.filename": "",
+			"sftp.server.filter.ignore.dotted.files": true,
+			"sftp.server.filter.filetype": "",
+			"sftp.server.filter.filecontent": "",
+			"sftp.server.filter.files.per.batch": 10,
+			"sftp.server.filter.total.files": 500,
+			"sftp.server.filter.delete.original": false,
+			"sftp.server.filter.ignore.processed.file": true,
+      "sftp.server.filter.file.includefileregexlist": [
+        "^.*\\.(?!jpg$|png$)[^.]+$",
+        "^.*\\.(?!jpg$|jpg$)[^.]+$",
+        "^.*\\.(?!jpg$|doc$)[^.]+$",
+        "^.*\\.(?!jpg$|txt$)[^.]+$"
+      ],
+      "sftp.server.filter.file.excludefileregexlist": [
+        
+        "^.*\\.(?!jpg$|exe$)[^.]+$"
+      ]
+			
+		}
+ ]
+}</value>
+          </entry>
+        </properties>
+        <runDurationMillis>0</runDurationMillis>
+        <schedulingPeriod>0 sec</schedulingPeriod>
+        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+        <yieldDuration>1 sec</yieldDuration>
+      </config>
+      <name>PushFileDroppointProcessorForHSBC</name>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>file.failure</name>
+      </relationships>
+      <relationships>
+        <autoTerminate>false</autoTerminate>
+        <name>file.success</name>
+      </relationships>
+      <style></style>
+      <type>com.thoughtapps.droppoint.droppointnode.nifi.DroppointProcessor</type>
+    </processors>
+  </snippet>
+  <timestamp>05/01/2017 15:33:31 IST</timestamp>
+</template>

@@ -1,0 +1,193 @@
+
+.root {
+    -fx-font-family: "Roboto";
+}
+
+.side-menu {
+    -fx-padding: 20.0, 10.0;
+    -fx-font-size: 15.0;
+    -fx-font-weight: NORMAL;
+    -fx-text-fill: #444;
+}
+
+.title-label {
+    -fx-font-size: 16.0px;
+    -fx-padding: 14.0px;
+    -fx-text-fill: rgba(0.0, 0.0, 0.0, 0.87);
+}
+
+.jfx-layout-heading {
+    -fx-font-size: 20.0px;
+    -fx-font-weight: BOLD;
+    -fx-alignment: center-left;
+    -fx-padding: 5.0 0.0 5.0 0.0;
+}
+
+.jfx-layout-body .label {
+    -fx-font-size: 14.0px;
+    -fx-pref-width: 400.0px;
+    -fx-wrap-text: true;
+}
+
+.jfx-layout-actions {
+    -fx-padding: 10.0px 0.0 0.0 0.0;
+    -fx-alignment: center-right;
+}
+
+.dialog-accept {
+    -fx-text-fill: #03A9F4;
+    -fx-font-weight: BOLD;
+    -fx-padding: 0.7em 0.8em;
+}
+
+/*******************************************************************************
+ *                                                                             *
+ * JFX Tool Bar                                                                *
+ *                                                                             *
+ ******************************************************************************/
+
+.jfx-tool-bar {
+    -fx-font-size: 20.0;
+    -fx-font-weight: BOLD;
+    -fx-background-color: #5264AE;
+    -fx-pref-width: 100.0%;
+    -fx-pref-height: 64.0px;
+}
+
+.jfx-tool-bar HBox {
+    -fx-alignment: center;
+    -fx-spacing: 25.0;
+    -fx-padding: 0.0 10.0;
+}
+
+.jfx-tool-bar Label {
+    -fx-text-fill: WHITE;
+}
+
+.jfx-tool-bar .jfx-options-burger {
+    -fx-padding: 22px;
+}
+
+.jfx-tool-bar .jfx-options-burger StackPane {
+    -fx-pref-width: 4px;
+}
+
+.jfx-tool-bar .jfx-rippler {
+    -jfx-rippler-fill: WHITE;
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX Textfield                                                                *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-text-field, .jfx-password-field, .jfx-text-area {
+    -fx-background-color: transparent;
+    -fx-font-weight: BOLD;
+    -fx-prompt-text-fill: #808080;
+    -fx-alignment: top-left;
+    -fx-max-width: 300.0;
+    -fx-pref-width: 300.0;
+    -jfx-focus-color: #4059A9;
+    -jfx-unfocus-color: #4d4d4d;
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX Decorator                                                                *
+*                                                                              *
+*******************************************************************************/
+
+.jfx-decorator {
+    -fx-decorator-color: derive(#5264AE, -20%);
+}
+
+.jfx-decorator .jfx-decorator-buttons-container {
+    -fx-background-color: -fx-decorator-color;
+}
+
+.jfx-decorator .resize-border {
+    -fx-border-color: -fx-decorator-color;
+    -fx-border-width: 0 4 4 4;
+}
+
+/*******************************************************************************
+*                                                                              *
+* Error Facade                                                                 *
+*                                                                              *
+*******************************************************************************/
+
+.error-label {
+    -fx-text-fill: #D34336;
+    -fx-font-size: 0.75em;
+    -fx-font-weight: bold;
+}
+
+.error-icon {
+    -fx-fill: #D34336;
+    -fx-font-size: 1.0em;
+}
+
+.jfx-text-field:error, .jfx-password-field:error, .jfx-text-area:error, .jfx-combo-box:error {
+    -jfx-focus-color: #D34336;
+    -jfx-unfocus-color: #D34336;
+}
+
+.jfx-text-field .error-label, .jfx-password-field .error-label, .jfx-text-area .error-label {
+    -fx-text-fill: #D34336;
+    -fx-font-size: 0.75em;
+}
+
+.jfx-text-field .error-icon, .jfx-password-field .error-icon, .jfx-text-area .error-icon {
+    -fx-fill: #D34336;
+    -fx-font-size: 1.0em;
+}
+
+/*******************************************************************************
+*                                                                              *
+* JFX button                                                                   *
+*                                                                              *
+*******************************************************************************/
+
+ .custom-jfx-button-raised-start {
+     -fx-padding: 0.2em 0.2em;
+     -fx-font-size: 14.0px;
+     -jfx-button-type: RAISED;
+     -fx-background-color: rgb(102.0, 153.0, 102.0);
+     -fx-text-fill: WHITE;
+ }
+
+ .custom-jfx-button-raised-stop {
+     -fx-padding: 0.2em 0.2em;
+     -fx-font-size: 14.0px;
+     -jfx-button-type: RAISED;
+     -fx-background-color: #CC0033;
+     -fx-text-fill: WHITE;
+ }
+
+.custom-jfx-button-raised {
+    -fx-padding: 0.7em 0.57em;
+    -fx-font-size: 14.0px;
+    -jfx-button-type: RAISED;
+    -fx-background-color: rgb(102.0, 153.0, 102.0);
+    -fx-text-fill: WHITE;
+}
+
+/*******************************************************************************
+*                                                                              *
+* Icons                                                                        *
+*                                                                              *
+*******************************************************************************/
+
+.status-icon-connected {
+      -fx-fill: #66CC00;
+      -fx-padding: 10;
+      -fx-cursor: hand;
+ }
+
+ .status-icon-disconnected {
+      -fx-fill: #CC0000;
+      -fx-padding: 10;
+      -fx-cursor: hand;
+ }

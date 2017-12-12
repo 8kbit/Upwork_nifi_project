@@ -1,0 +1,30 @@
+a) Install Lombok plugin in your IDE
+b) Update /Droppoint/src/main/resources/application.properties  "init.sftp.node.hostname" property to point to the IP of the Machine where DroppointProcessor is installed.
+c) Check /DroppointProcessor/src/main/resources/application.properties . Not much changes needed but check if it has local host or 0.0.0.0 as IP and the port is the maching in both application properties 
+
+Maven is used as build tool (you need to install it)
+Project consists of 4 modules:
+ - Core
+ - DropPoint (Drop point application)
+ - DropPointProcessor (Nifi processor)
+ - docs (documentation etc)
+ 
+1) locate to project parent directory and run "mvn -DskipTests=true clean install" to build all artifacts. On eclipse use the goals -DskipTests=true clean install on pom.xml in parent directory.
+
+2) locate to DropPointProcessor sub-directory and run "mvn -DskipTests=true install nifi-nar:nar" to build DropPointProcessor nar (DropPoint\DropPointProcessor\target\DropPointProcessor-0.0.1-SNAPSHOT.nar)
+
+3) locate to DropPoint sub-directory and run "mvn -DskipTests=true install assembly:assembly" to build DropPoint application (DropPoint\DropPoint\target\DropPoint-0.0.1-SNAPSHOT-jar-with-dependencies.jar)
+
+4) put DropPointProcessor-0.0.1-SNAPSHOT.nar in nifi "lib" folder and launch NiFi 
+
+5) launch DropPointProcessor
+
+8) launch DropPoint application - run "java -jar DropPoint-0.0.1-SNAPSHOT-jar-with-dependencies.jar". (DropPoint run on localhost:22)
+(it will create "db" folder near the jar. This folder contains H2 database. You can view it via RazorSQL or over programm. Login/passsword admin/admin . I've used h2-1.4.193.jar jdbc driver). "C://dev//upwork//files" - is a root folder for SFTP server. You can change it in database table "Configuration"
+
+9) Instruction example for DropPointProcessor located in DropPoint\docs\InstructionJSONExample.json
+
+10) Testing template for nifi located in DropPoint\docs\DroppointProcessors_Example_Template
+
+11) To test DB hsqldb-2.4.0.jar to test SQL instruction is located in DropPoint\DropPoint\src\test\resources\jdbc\hsqldb-2.4.0.jar
+

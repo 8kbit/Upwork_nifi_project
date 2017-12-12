@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import com.thoughtapps.droppoint.droppoint.ui.components.*?>
+<?import com.thoughtapps.droppoint.droppoint.ui.validators.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+    <!-- Header -->
+    <BorderPane>
+        <top>
+            <VBox>
+                <JFXToolbar>
+                    <leftItems>
+                        <Label>Drop point</Label>
+                    </leftItems>
+                    <rightItems>
+                        <HBox>
+                            <JFXButton fx:id="startButton" prefWidth="50" prefHeight="20" buttonType="RAISED"
+                                       text="Start"
+                                       styleClass="custom-jfx-button-raised-start"/>
+                            <JFXButton fx:id="stopButton" prefWidth="50" prefHeight="20" buttonType="RAISED" text="Stop"
+                                       styleClass="custom-jfx-button-raised-stop" visible="false"/>
+                        </HBox>
+                        <FontAwesomeIconView fx:id="conStatusIcon" glyphName="CIRCLE"
+                                             style="-fx-font-family: FontAwesome"
+                                             styleClass="status-icon-disconnected" size="2em" disable="true"/>
+                    </rightItems>
+                </JFXToolbar>
+            </VBox>
+        </top>
+
+        <!-- Content Area -->
+        <center>
+            <VBox maxWidth="400" maxHeight="650" spacing="30" alignment="BASELINE_CENTER">
+                <HBox alignment="BASELINE_CENTER" maxWidth="320">
+                    <CustomJFXTextField id="dropPointId" promptText="Drop point id"
+                                        labelFloat="true" disable="true">
+                        <validators>
+                            <RequiredFieldValidator message="field is required"/>
+                        </validators>
+                    </CustomJFXTextField>
+                    <FontAwesomeIconView fx:id="copyDropPointIdBtn" glyphName="COPY" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                    <VBox minWidth="10"/>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+                <HBox alignment="BASELINE_CENTER">
+                    <CustomJFXTextField id="allowedProcessorIds" promptText="Allowed processor ids"
+                                        labelFloat="true" disable="true">
+                        <validators>
+                            <RequiredFieldValidator message="field is required"/>
+                        </validators>
+                    </CustomJFXTextField>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+                <HBox alignment="BASELINE_CENTER">
+                    <CustomJFXTextField id="dropPointPort" promptText="Port drop point listening at"
+                                        labelFloat="true" disable="true">
+                        <validators>
+                            <PortValidator message="wrong port number"/>
+                        </validators>
+                    </CustomJFXTextField>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+                <HBox alignment="BASELINE_CENTER">
+                    <CustomJFXTextField id="dropPointSFTPRootDir" promptText="Drop point SFTP root dir"
+                                        labelFloat="true" disable="true">
+                        <validators>
+                            <FolderExistsValidator message="wrong path"/>
+                        </validators>
+                    </CustomJFXTextField>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+                <HBox alignment="BASELINE_CENTER">
+                    <CustomJFXTextField id="dropPointPingIntervalSec" promptText="Server ping interval (sec)"
+                                        labelFloat="true" disable="true">
+                        <validators>
+                            <PositiveNumberValidator message="field is required"/>
+                        </validators>
+                    </CustomJFXTextField>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+                <HBox alignment="BASELINE_CENTER">
+                    <CustomJFXTextField id="serverHostname" promptText="Server hostname"
+                                        labelFloat="true" disable="true">
+                        <validators>
+                            <HostnameValidator message="field is required"/>
+                        </validators>
+                    </CustomJFXTextField>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+                <HBox alignment="BASELINE_CENTER">
+                    <CustomJFXTextField id="serverPort" promptText="Server port"
+                                        labelFloat="true" disable="true">
+                        <validators>
+                            <PortValidator message="wrong port number"/>
+                        </validators>
+                    </CustomJFXTextField>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+                <HBox alignment="BASELINE_CENTER">
+                    <CustomJFXTextField id="serverUsername" promptText="Username for authentication on server"
+                                        labelFloat="true" disable="true">
+                        <validators>
+                            <RequiredFieldValidator message="field is required"/>
+                        </validators>
+                    </CustomJFXTextField>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+                <HBox alignment="BASELINE_CENTER">
+                    <CustomJFXPasswordField id="serverPassword" promptText="Password for authentication on server"
+                                            labelFloat="true" disable="true">
+                        <validators>
+                            <RequiredFieldValidator message="field is required"/>
+                        </validators>
+                    </CustomJFXPasswordField>
+                    <FontAwesomeIconView glyphName="QUESTION_CIRCLE" style="-fx-font-family: FontAwesome"
+                                         size="1.5em" textAlignment="JUSTIFY"/>
+                </HBox>
+
+                <HBox spacing="30" alignment="CENTER">
+                    <JFXButton id="editButton" prefWidth="60" prefHeight="30" buttonType="RAISED" text="Edit"
+                               styleClass="custom-jfx-button-raised"/>
+                    <JFXButton id="saveButton" prefWidth="60" prefHeight="30" buttonType="RAISED" text="Save"
+                               disable="true"
+                               styleClass="custom-jfx-button-raised"/>
+                </HBox>
+            </VBox>
+        </center>
+    </BorderPane>
+</StackPane>

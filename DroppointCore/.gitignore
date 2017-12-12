@@ -1,0 +1,14 @@
+/bin/
+/target/
+
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# Package Files #
+*.jar
+*.war
+*.zip
+*.nar

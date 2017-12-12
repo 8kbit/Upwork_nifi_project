@@ -1,0 +1,23 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+.idea
+.classpath
+.project
+.settings
+*.iml
+*.log
+*.jar
+*.class
+
+/DroppointProcessor/target/
+/DroppointCore/target/
+/DropPoint/target/
+/logs/
+/db/
+/DropPoint/src/test/resources/tmp/
+/db
+/logs
+
+DroppointCore/target/test-classes/com/thoughtapps/droppoint/core/unit/SshServerImplTest$2.class
+DroppointCore/target/test-classes/com/thoughtapps/droppoint/core/unit/InstructionsContainerTest.class
+DropPoint/logs/droppoint.log
+DroppointCore/target/DroppointCore-0.0.1-SNAPSHOT.jar

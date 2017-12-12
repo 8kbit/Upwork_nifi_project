@@ -1,0 +1,23 @@
+{
+  "sftp.client.identity.id": "Abc-123-xYz",
+  "sftp.server.heartbeat.interval": "180",
+  "sftp.server.instructions": [
+    {
+      "sftp.server.rule": "pullfile",
+      "sftp.server.rule.name": "Get accounting files",
+      "sftp.server.filter.dir.path": "",
+      "sftp.server.filter.recursion.depth": 10,
+      "sftp.server.push.recursively": true,
+      "sftp.server.filter.filename": "example.txt",
+      "sftp.server.filter.ignore.dotted.files": true,
+      "sftp.server.filter.file.includefileregexlist": [],
+      "sftp.server.filter.file.excludefileregexlist": [],
+      "sftp.server.filter.filetype": "txt",
+      "sftp.server.filter.filecontent": "",
+      "sftp.server.filter.files.per.batch": 10,
+      "sftp.server.filter.total.files": 500,
+      "sftp.server.filter.delete.original": true,
+      "sftp.server.filter.ignore.processed.file": true
+    }
+  ]
+}

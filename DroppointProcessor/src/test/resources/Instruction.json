@@ -1,0 +1,60 @@
+{
+  "sftp.client.identity.id": "Abc-123-xYz",
+  "sftp.server.heartbeat.interval": "2",
+  "sftp.server.instructions": [{
+    "sftp.server.rule": "pullfile",
+    "sftp.server.rule.name": "Get accounting files",
+    "sftp.server.filter.dir.path": "sftpRoot",
+    "sftp.server.use.compression": true,
+    "sftp.server.push.recursively": true,
+    "sftp.server.filter.recursion.depth": 10,
+    "sftp.server.filter.filename": "",
+    "sftp.server.filter.ignore.dotted.files": false,
+    "sftp.server.filter.file.includefileregexlist": [
+      "^.*\\.(txt$)", "^.*\\.(xml$)"
+    ],
+    "sftp.server.filter.file.excludefileregexlist": [
+      "^.*\\.(jpg$)"
+    ],
+    "sftp.server.filter.filetype": "",
+    "sftp.server.filter.filecontent": "",
+    "sftp.server.filter.files.per.batch": 10,
+    "sftp.server.filter.total.files": 500,
+    "sftp.server.filter.delete.original": true,
+    "sftp.server.filter.ignore.processed.file": true
+  },
+    {
+      "sftp.server.rule": "pushfile",
+      "sftp.server.rule.name": "Keep sending new admin files",
+      "sftp.server.polling.interval": "6",
+      "sftp.server.push.recursively": true,
+      "sftp.server.filter.recursion.depth": 10,
+      "sftp.server.filter.dir.path": "sftpRoot",
+      "sftp.server.use.compression": true,
+      "sftp.server.use.natural.ordering": true,
+      "sftp.server.filter.filename": "",
+      "sftp.server.filter.ignore.dotted.files": true,
+      "sftp.server.filter.file.includefileregexlist": [],
+      "sftp.server.filter.file.excludefileregexlist": [],
+      "sftp.server.filter.filetype": "",
+      "sftp.server.filter.filecontent": "",
+      "sftp.server.filter.files.per.batch": 10,
+      "sftp.server.filter.total.files": 500,
+      "sftp.server.filter.delete.original": true,
+      "sftp.server.filter.ignore.processed.file": true
+    },
+    {
+      "sftp.server.rule": "sql",
+      "sftp.server.rule.name": "Get HR data from DB",
+      "sftp.server.use.compression": true,
+      "sftp.server.database.connection.url": "jdbc:h2:tcp://localhost/~/test",
+      "sftp.server.database.connection.driver.class.name": "org.h2.Driver",
+      "sftp.server.database.connection.driver.location(s)": [
+        "C:/Program Files (x86)/H2/bin/h2-1.4.191.jar"
+      ],
+      "sftp.server.database.user": "sa",
+      "sftp.server.database.password": "",
+      "sftp.server.database.sql.query": "SELECT * FROM  USER"
+    }
+  ]
+}
